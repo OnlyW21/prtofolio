@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wael A.Alessa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="wattpad.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Share:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <header>
+            <div class="header-controls">
+                <div class="theme-toggle">
+                    <button id="theme-toggle" class="btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="profile-banner">
+                <img src="r.jpeg" alt="Profile Banner">
+            </div>
+            <div class="profile-info">
+                <div class="profile-pic">
+                    <img src="image.png" alt="Profile Picture">
+                </div>
+                <div class="follow-btn">
+                    <button class="btn primary-btn">Follow</button>
+                </div>
+            </div>
+            <div class="user-identity">
+                <h1 class="username">Wael Alessa</h1>
+                <p class="handle">@w</p>
+                <p class="bio">This is not X! Welcome to my portfolio. I am Wael</p>
+                <div class="profile-meta">
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Riyadh</span>
+                    <span class="website"><i class="fas fa-link"></i> <a href="https://x.com" target="_blank">x.com</a></span>
+                    <span class="joined"><i class="fas fa-calendar-alt"></i> Developer since 2021</span>
+                </div>
+                <div class="follow-stats">
+                    <span class="following"><strong>512</strong> Following</span>
+                    <span class="followers"><strong>2.4K</strong> Followers</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="profile-nav">
+            <ul>
+                <li class="active" data-tab="tweets">me</li>
+                <li data-tab="skills">Skills</li>
+                <li data-tab="portfolio">Projects</li>
+                <li data-tab="achievements">Achivements</li>
+                <li data-tab="contact">Contact</li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Section -->
+        <main>
+            <section id="tweets" class="tab-content active">
+                <div class="pinned-tweet">
+                    <div class="pinned-label"><i class="fas fa-thumbtack"></i> Pinned</div>
+                    <div class="tweet">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <span class="tweet-name">About</span>
+                                <span class="tweet-handle">@w</span>
+                                <span class="tweet-time">· 3d</span>
+                            </div>
+                            <div class="tweet-text">Welcome to my portfolio! I am passionate about programming and design, with a strong desire to expand my skills in both areas. Interested in developing applications that facilitate artificial intelligence, exploring how to seamlessly connect AI technologies with user-friendly solutions.</div>
+                            <div class="tweet-actions">
+                                <span class="tweet-action"><i class="far fa-comment"></i> <span>12</span></span>
+                                <span class="tweet-action"><i class="fas fa-retweet"></i> <span>34</span></span>
+                                <span class="tweet-action"><i class="far fa-heart"></i> <span>142</span></span>
+                                <span class="tweet-action"><i class="far fa-share-square"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <span class="tweet-name">Education</span>
+                                <span class="tweet-handle"></span>
+                                <span class="tweet-time">· 05/08/2020</span>
+                            </div>
+                            <div class="experience-item">
+                                <div class="logo-line-wrapper">  <div class="uni-logo">
+                                        <img loading="lazy" src="images/kfu.png" alt="Sayer Logo">
+                                    </div>
+                                    <div class="vertical-line"></div>  </div>
+                                <div class="company-details">
+                                    <h3>King Faisal University</h3>
+                                    <p class="major">Bachelor of Computer Science</p>
+                                    <p class="major">2020 - 2025 🎉</p>
+                                    <p class="gpa">GPA: 4.85</p>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="tweet-actions">
+                                <span class="tweet-action"><i class="far fa-comment"></i> <span>10 k</span></span>
+                                <span class="tweet-action"><i class="fas fa-retweet"></i> <span>21 k</span></span>
+                                <span class="tweet-action"><i class="far fa-heart"></i> <span>0</span></span>
+                                <span class="tweet-action"><i class="far fa-share-square"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <span class="tweet-name">Expereince</span>
+                                <span class="tweet-handle"></span>
+                                <span class="tweet-time">· 01/01/2024</span>
+                            </div>
+                            <div class="experience-item">
+                                <div class="logo-line-wrapper">  <div class="uni-logo">
+                                        <img loading="lazy" src="images/Sayer_Logo.png" alt="Sayer Logo">
+                                    </div>
+                                    <div class="vertical-line"></div>  </div>
+                                <div class="company-details">
+                                    <h3>Sayer</h3>
+                                    <p class="role">Co-Founder, Developer.</p>
+                                    <p class="description">As Co-Founder and Lead Developer at Sayer, I have participate in desgining and building our platform, ensuring it is scalable, efficient, and user-friendly to support the company’s growth.</p>
+                                    <p class="period">2024 - present</p>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="tweet-actions">
+                                <span class="tweet-action"><i class="far fa-comment"></i> <span>12</span></span>
+                                <span class="tweet-action"><i class="fas fa-retweet"></i> <span>34</span></span>
+                                <span class="tweet-action"><i class="far fa-heart"></i> <span>142</span></span>
+                                <span class="tweet-action"><i class="far fa-share-square"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                
+            </section>
+            </div>
+
+            
+        <section id="skills" class="tab-content">
+        
+                    <div class="skills-container">
+                        <div class="skills-category">
+                            <span class="tweet-name">Lifelong learner</span>
+                            <div class="skills-buttons-container">
+                                <div class="skills-button" ><a>Python</a></div>
+                                <div class="skills-button" ><a>JavaScript</a></div>
+                                <div class="skills-button" ><a>HTML5</a></div>
+                                <div class="skills-button" ><a>CSS3</a></div>
+                                <div class="skills-button" ><a>Flutter</a></div>
+                                <div class="skills-button" ><a>Tailwind</a></div>
+                                <div class="skills-button" ><a>Docker</a></div>
+                    
+                
+                                <div class="skills-button" ><a>AI</a></div>
+                                <div class="skills-button" ><a>ML</a></div>
+                                <div class="skills-button" ><a>LLM</a></div>
+                                <div class="skills-button" ><a>Data Analysis</a></div>
+            
+                
+                                <div class="skills-button" ><a>Figma Design</a></div>
+                                <div class="skills-button" ><a>Responsive Design</a></div>
+                                <div class="skills-button" ><a>UI/UX Principles</a></div>
+                
+                                <div class="skills-button" ><a>Problem Solving</a></div>
+                                <div class="skills-button" ><a>Team Work</a></div>
+                                <div class="skills-button" ><a>Creative Thinking</a></div>
+                                <div class="skills-button" ><a>Adaptability</a></div>
+                                <div class="skills-button" ><a>Time Management</a></div>
+                                <div class="skills-button" ><a>Commitment</a></div>
+                                <div class="skills-button" ><a>Communication</a></div>
+                                <div class="skills-button" ><a>Leadership</a></div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Tab Content -->
+<section id="portfolio" class="tab-content">
+    <div class="section-header">
+        <span class="section-emoji">🚀</span>
+        <h2 class="section-title">Recent Project</h2>
+    </div>
+    
+    <!-- Project Cards Container -->
+    <div class="project-cards-container">
+        <!-- AI-based Triage System -->
+        <div class="project-card">
+            <div class="project-media">
+                <img src="images/triage.gif" alt="AI-based Triage System" class="project-image">
+                <div class="project-badge ai-badge">Grad Project</div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">AI-based Triage System</h3>
+                <p class="project-description">
+                    CS graduation project utilizes LLM and RAG to classify patients based on urgency, ensuring timely and accurate triage to reduce crowds in EDs.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">LLM</span>
+                    <span class="project-tag">RAG</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">Flutter</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="project-action-btn">
+                        <i class="fas fa-eye"></i> View Details
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sayer App -->
+        <div class="project-card">
+            <div class="project-media">
+                <img src="images/Screenshot 1446-09-10 at 9.36.06 PM.png" alt="Sayer App" class="project-image">
+                <div class="project-badge mobile-badge">Mobile App</div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Sayer App</h3>
+                <p class="project-description">
+                    A mobile application that connects car sellers with buyers. Successfully deployed in App Store.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">Flutter</span>
+                    
+                </div>
+                <div class="project-actions">
+                    <a href="https://apps.apple.com/app/id6596770954" target="_blank" class="project-action-btn">
+                        <i class="fab fa-app-store"></i> Download
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sayer Website -->
+        <div class="project-card">
+            <div class="project-media">
+                <img src="images/webSayer.gif" alt="Sayer Website" class="project-image">
+                <div class="project-badge web-badge">Web Project</div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Sayer Website</h3>
+                <p class="project-description">
+                    Landing page for Sayer that introduces services provided through the application. Successfully deployed.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">Flutter</span>
+
+                </div>
+                <div class="project-actions">
+                    <a href="http://sayeer.sa/" target="_blank" class="project-action-btn">
+                        <i class="fas fa-globe"></i> Visit Site
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wefaq -->
+        <div class="project-card">
+            <div class="project-media">
+                <img src="images/wefaq.gif" alt="Wefaq" class="project-image">
+                <div class="project-badge winner-badge">Award Winner</div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Wefaq</h3>
+                <p class="project-description">
+                    Smart meeting board that employs AI agents to facilitate meeting management and enhance decision-making.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">Flutter</span>
+                    <span class="project-tag">Python</span>
+                </div>
+                <div class="project-awards">
+                    <div class="award">
+                        <i class="fas fa-trophy"></i> 3rd place in <a href="https://x.com/CCSIT_SAC/status/1885632563781284089" target="_blank">Bermjon</a> competition
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="https://x.com/CCSIT_SAC/status/1885632563781284089" class="project-action-btn">
+                        <i class="fas fa-info-circle"></i> See more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Achievements Tab Content -->
+<section id="achievements" class="tab-content">
+    <div class="section-header">
+        <span class="section-emoji">🏆</span>
+        <h2 class="section-title">Achievements</h2>
+    </div>
+    
+    <div class="achievements-intro">
+        <p>In this section, I'll share my achievements in hackathons. I may not always win, but I enjoy the experience and learn a lot from each event.</p>
+    </div>
+    
+    <div class="achievements-timeline">
+        <!-- Barmajon Achievement -->
+        <div class="achievement-card">
+            <div class="achievement-date">
+                <span class="date-chip">Jan 30, 2025</span>
+            </div>
+            <div class="achievement-content">
+                <div class="achievement-header">
+                    <div class="achievement-logo">
+                        <img src="images/barm.jpg" alt="Barmajon Logo">
+                    </div>
+                    <div class="achievement-title">
+                        <h3>Barmajon</h3>
+                        <span class="achievement-badge winner">3rd Place 🚀</span>
+                    </div>
+                    <div class="achievement-expand">
+                        <button class="expand-btn" data-target="barmajon-details">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="achievement-details" id="barmajon-details">
+                    <p>Created an innovative AI solution during the Barmajon hackathon, securing 3rd place among competitive teams.</p>
+                    <div class="achievement-media">
+                        <div class="video-preview" data-video="vids/wefaq.mp4">
+                            <div class="video-thumbnail">
+                                <source src="vids/absher.mp4" type="video/mp4">
+                                <div class="play-overlay">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                            </div>
+                            <span class="video-label">Watch Demo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Absherthone Achievement -->
+        <div class="achievement-card">
+            <div class="achievement-date">
+                <span class="date-chip">Apr 20, 2024</span>
+            </div>
+            <div class="achievement-content">
+                <div class="achievement-header">
+                    <div class="achievement-logo">
+                        <img src="images/absher.jpg" alt="Absherthone project preview">
+                    </div>
+                    <div class="achievement-title">
+                        <h3>Absherthone</h3>
+                        <span class="achievement-badge top20">Top 20 Teams ⭐</span>
+                    </div>
+                    <div class="achievement-expand">
+                        <button class="expand-btn" data-target="absher-details">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="achievement-details" id="absher-details">
+                    <p>Developed an impressive solution during Absherthone, ranking among the top 20 teams in this competitive hackathon.</p>
+                    <div class="achievement-media">
+                        <div class="video-preview" data-video="vids/absher.mp4">
+                            <div class="video-thumbnail">
+                                <div class="play-overlay">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                            </div>
+                            <span class="video-label">Watch Demo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dfnps Achievement -->
+        <div class="achievement-card">
+            <div class="achievement-date">
+                <span class="date-chip">Oct 21, 2024</span>
+            </div>
+            <div class="achievement-content">
+                <div class="achievement-header">
+                    <div class="achievement-logo">
+                        <img src="images/logo.svg" alt="Dfnps Logo">
+                    </div>
+                    <div class="achievement-title">
+                        <h3>Dfnps</h3>
+                        <span class="achievement-badge ai">AI Project</span>
+                    </div>
+                    <div class="achievement-expand">
+                        <button class="expand-btn" data-target="dfnps-details">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="achievement-details" id="dfnps-details">
+                    <p>An AI-based platform that connects individuals and organizations with volunteering opportunities, making it easier to engage in meaningful social impact 🌍</p>
+                    <div class="achievement-tags">
+                        <span class="achievement-tag">AI</span>
+                        <span class="achievement-tag">Social Impact</span>
+                        <span class="achievement-tag">Volunteering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Irrigation Achievement -->
+        <div class="achievement-card">
+            <div class="achievement-date">
+                <span class="date-chip">Sep 5, 2024</span>
+            </div>
+            <div class="achievement-content">
+                <div class="achievement-header">
+                    <div class="achievement-logo">
+                        <img src="images/iriga.png" alt="Irrigation Logo">
+                    </div>
+                    <div class="achievement-title">
+                        <h3>Irrigation</h3>
+                        <span class="achievement-badge agritech">AgriTech</span>
+                    </div>
+                    <div class="achievement-expand">
+                        <button class="expand-btn" data-target="irrigation-details">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="achievement-details" id="irrigation-details">
+                    <p>Smart farming assistant that helps farmers manage their farms efficiently using AI-powered tools for monitoring, planning, and optimizing agricultural operations 🌱🚜</p>
+                    <div class="achievement-tags">
+                        <span class="achievement-tag">Smart Farming</span>
+                        <span class="achievement-tag">AI</span>
+                        <span class="achievement-tag">Agriculture</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Raqeem Achievement -->
+        <div class="achievement-card">
+            <div class="achievement-date">
+                <span class="date-chip">Nov 20, 2024</span>
+            </div>
+            <div class="achievement-content">
+                <div class="achievement-header">
+                    <div class="achievement-logo">
+                        <img src="images/raqeem.jpg" alt="Raqeem Logo">
+                    </div>
+                    <div class="achievement-title">
+                        <h3>Raqeem</h3>
+                        <span class="achievement-badge business">Business AI</span>
+                    </div>
+                    <div class="achievement-expand">
+                        <button class="expand-btn" data-target="raqeem-details">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="achievement-details" id="raqeem-details">
+                    <p>AI tool designed to help businesses develop effective strategic plans based on their specific challenges, market conditions, and objectives. 🎯💡</p>
+                    <div class="achievement-tags">
+                        <span class="achievement-tag">Strategic Planning</span>
+                        <span class="achievement-tag">AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Video Modal -->
+    <div class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</section>
+        <section id="contact" class="tab-content">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>Waeelalessa5@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>0542772934</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Riyadh, Saudi Arabia</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Waelalessa21" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/wael-alessa-a0403032b/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:Waeelalessa5@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="wael.pdf" class="social-link"><i class="fa-regular fa-file"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Wael. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
