@@ -1,0 +1,20 @@
+/* Theme-related styles */
+body.dark-mode {
+    --bg-color: var(--dark-bg);
+    --text-color: var(--dark-text);
+    --text-secondary: var(--dark-text-secondary);
+    --border-color: var(--dark-border);
+    --primary-color: var(--dark-primary);
+    --hover-color: var(--dark-hover);
+    --card-bg: var(--dark-card-bg);
+}
+
+#theme-toggle {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}

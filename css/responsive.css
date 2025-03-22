@@ -1,0 +1,144 @@
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    :root {
+        --section-padding: 10px;
+    }
+    
+    .achievement-header {
+        padding: 12px;
+    }
+    
+    .achievement-logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .achievement-title h3 {
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .date-chip {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+    }
+    
+    .project-media {
+        height: 180px;
+    }
+    
+    .project-title {
+        font-size: 1rem;
+    }
+    
+    .project-description {
+        font-size: 0.85rem;
+    }
+    
+    .project-action-btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .skills-button {
+        padding: 4px 12px;
+    }
+    
+    .skills-button a {
+        font-size: 0.8rem;
+    }
+    
+    .skills-category-title {
+        font-size: 0.9rem;
+    }
+    
+    .skills-buttons-container {
+        padding-top: 20px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-nav ul {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+    }
+    
+    .profile-nav li {
+        padding: 15px 10px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    
+    :root {
+        --section-padding: 8px;
+    }
+    
+    .achievement-logo {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .achievement-title h3 {
+        font-size: 0.9rem;
+    }
+    
+    .date-chip {
+        font-size: 0.6rem;
+    }
+    
+    .achievement-details p {
+        font-size: 0.85rem;
+    }
+    
+    .achievement-tag {
+        font-size: 0.7rem;
+    }
+    
+    .project-media {
+        height: 160px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .project-badge {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+    
+    .skills-button {
+        padding: 3px 10px;
+    }
+    
+    .skills-button a {
+        font-size: 0.7rem;
+    }
+    
+    .skills-buttons-container {
+        gap: 6px;
+    }
+    
+    .skills-category-title {
+        font-size: 0.85rem;
+    }
+}

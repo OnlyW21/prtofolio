@@ -1,0 +1,102 @@
+:root {
+    --light-bg: #ffffff;
+    --light-text: #14171a;
+    --light-text-secondary: #657786;
+    --light-border: #e1e8ed;
+    --light-primary: #1da1f2;
+    --light-hover: #e8f5fd;
+    --light-card-bg: #f7f9fa;
+    
+    --dark-bg: #15202b;
+    --dark-text: #ffffff;
+    --dark-text-secondary: #8899a6;
+    --dark-border: #38444d;
+    --dark-primary: #1da1f2;
+    --dark-hover: #192734;
+    --dark-card-bg: #192734;
+    
+    --bg-color: var(--light-bg);
+    --text-color: var(--light-text);
+    --text-secondary: var(--light-text-secondary);
+    --border-color: var(--light-border);
+    --primary-color: var(--light-primary);
+    --hover-color: var(--light-hover);
+    --card-bg: var(--light-card-bg);
+    
+    --section-max-width: 600px;
+    --section-padding: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Share', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--section-max-width);
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+}
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+body.rtl .header-controls {
+    flex-direction: row-reverse;
+}
+
+body.rtl .profile-pic {
+    left: auto;
+    right: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 15px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    margin-top: 30px;
+    max-width: var(--section-max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 12px;
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.primary-btn:hover {
+    background-color: rgba(29, 161, 242, 0.9);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&display=swap');

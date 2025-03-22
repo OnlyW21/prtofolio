@@ -1,0 +1,147 @@
+.pinned-tweet {
+    margin-bottom: 20px;
+}
+
+.pinned-label {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.tweet {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.tweet:hover {
+    background-color: var(--hover-color);
+}
+
+.tweet-content {
+    width: 100%;
+}
+
+.tweet-header {
+    margin-bottom: 10px;
+}
+
+.tweet-name {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.tweet-handle, .tweet-time {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.tweet-text {
+    margin-bottom: 15px;
+    white-space: pre-line;
+}
+
+.tweet-image {
+    margin-bottom: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.tweet-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.tweet-image img:hover {
+    transform: scale(1.02);
+}
+
+.tweet-video {
+    position: relative;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.video-placeholder {
+    position: relative;
+}
+
+.video-placeholder img {
+    width: 100%;
+    height: auto;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    transition: background-color 0.3s ease;
+}
+
+.video-placeholder:hover .play-button {
+    background-color: var(--primary-color);
+}
+
+.tweet-actions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 425px;
+}
+
+.tweet-action {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tweet-action:hover {
+    color: var(--primary-color);
+}
+
+.uni-logo, .company-logo {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(205, 205, 205);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 74, 173, 0.4);
+}
+
+.uni-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.company-logo img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.logo-line-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

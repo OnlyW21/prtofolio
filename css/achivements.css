@@ -1,0 +1,344 @@
+.achievements-intro {
+    margin-bottom: 25px;
+    padding: 12px 15px;
+    background-color: var(--hover-color);
+    border-radius: 15px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    border-left: 4px solid var(--primary-color);
+    width: 100%;
+}
+
+.achievements-timeline {
+    position: relative;
+    margin-left: 15px;
+    width: calc(100% - 15px);
+}
+
+.achievements-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--border-color);
+    transform: translateX(-50%);
+}
+
+.achievement-card {
+    display: flex;
+    margin-bottom: 25px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 100%;
+}
+
+.achievement-card.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.achievement-date {
+    position: absolute;
+    left: 10px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.date-chip {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-content {
+    flex: 1;
+    margin-left: 15px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    width: calc(100% - 15px);
+}
+
+.achievement-card:hover .achievement-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.achievement-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.achievement-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 74, 173, 0.4);
+}
+
+.achievement-logo img {
+    width: 80%;
+    height: 80%;
+}
+
+.achievement-card:hover .achievement-logo {
+    transform: scale(1.05);
+}
+
+.achievement-title {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.achievement-title h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.achievement-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+    color: white;
+}
+
+.achievement-badge.top20 {
+    background: linear-gradient(135deg, #2196F3, #3F51B5);
+}
+
+.achievement-expand {
+    margin-left: 10px;
+}
+
+.expand-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expand-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.expand-btn.active i {
+    transform: rotate(180deg);
+}
+
+.achievement-details {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    width: 100%;
+}
+
+.achievement-details.active {
+    padding: 0 15px 15px;
+    max-height: 500px;
+}
+
+.achievement-details p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.achievement-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.achievement-tag {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.achievement-tag:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.achievement-media {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.video-preview {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.video-preview:hover {
+    transform: scale(1.03);
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.video-preview:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.play-overlay i {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.video-preview:hover .play-overlay {
+    opacity: 1;
+}
+
+.video-label {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.video-modal.active .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.modal-content video {
+    width: 100%;
+    display: block;
+}
+
+@keyframes gentle-swing {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
