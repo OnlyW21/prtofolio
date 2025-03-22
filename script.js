@@ -180,9 +180,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 300);
 });
 
-// Initialize enhanced skills section
+
 function initEnhancedSkills() {
-    // Set animation order variables for staggered entrance
+    
     const skillsCategories = document.querySelectorAll('.skills-category');
     
     skillsCategories.forEach(category => {
@@ -192,63 +192,61 @@ function initEnhancedSkills() {
         });
     });
     
-    // Add tooltip and hover effects on mobile
+   
     const skillsButtons = document.querySelectorAll('.skills-button');
     
     skillsButtons.forEach(button => {
-        // For mobile - show proficiency level on tap
+        
         button.addEventListener('touchstart', function() {
-            // First remove active class from all buttons
+            
             skillsButtons.forEach(btn => btn.classList.remove('touch-active'));
             
-            // Add active class to current button
+            
             this.classList.add('touch-active');
         });
       
     });
 }
 
-// Add to your existing DOMContentLoaded event handler
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Your existing code
-    
-    // Initialize the enhanced skills section
+  
     initEnhancedSkills();
 });
 
-// Initialize enhanced projects section
+
 function initProjectsSection() {
     const projectCards = document.querySelectorAll('.project-card');
     
-    // Add hover effect and interaction to project cards
+   
     projectCards.forEach(card => {
-        // Create an interactive experience with random movement
+        
         card.addEventListener('mouseenter', function() {
             const cardMedia = this.querySelector('.project-media');
             const image = this.querySelector('.project-image');
             
-            // Add a slight 3D tilt effect based on mouse position
+            
             this.addEventListener('mousemove', function(e) {
                 const x = e.offsetX;
                 const y = e.offsetY;
                 const width = this.offsetWidth;
                 const height = this.offsetHeight;
                 
-                // Calculate rotation based on mouse position
+                
                 const rotateX = (y - height / 2) / 20;
                 const rotateY = (width / 2 - x) / 20;
                 
-                // Apply transform
+               
                 this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
                 
-                // Make image follow slightly
+                
                 if (image) {
                     image.style.transform = `scale(1.05) translateX(${(x - width / 2) / 40}px) translateY(${(y - height / 2) / 40}px)`;
                 }
             });
         });
         
-        // Reset card position when mouse leaves
+        
         card.addEventListener('mouseleave', function() {
             this.style.transform = '';
             const image = this.querySelector('.project-image');
@@ -256,11 +254,11 @@ function initProjectsSection() {
                 image.style.transform = '';
             }
             
-            // Remove mousemove event listener
+           
             this.removeEventListener('mousemove', () => {});
         });
         
-        // Add click animation for mobile devices
+       
         card.addEventListener('touchstart', function() {
             this.style.transform = 'scale(0.98)';
             setTimeout(() => {
@@ -269,10 +267,10 @@ function initProjectsSection() {
         });
     });
     
-    // Create a badge highlight effect
+    
     const badges = document.querySelectorAll('.project-badge');
     badges.forEach(badge => {
-        // Add random slight movements to badges
+        
         setInterval(() => {
             const randomX = Math.random() * 3 - 1.5;
             const randomY = Math.random() * 3 - 1.5;
@@ -283,7 +281,7 @@ function initProjectsSection() {
         }, Math.random() * 5000 + 3000); // Random interval between 3-8 seconds
     });
     
-    // Animate project tags on scroll
+    
     const projectTags = document.querySelectorAll('.project-tag');
     let animatedTags = new Set();
     
@@ -302,25 +300,19 @@ function initProjectsSection() {
         });
     }
     
-    // Check tags on scroll
+
     window.addEventListener('scroll', animateTagsOnScroll);
     
-    // Initial check for visible tags
     animateTagsOnScroll();
 }
 
-// Add to your DOMContentLoaded event handler
 document.addEventListener('DOMContentLoaded', function() {
-    // Your existing initialization code
-    
-    // Initialize the projects section
+   
     initProjectsSection();
 });
 
 
-// Initialize achievements section with controlled animations
 function initAchievementsSection() {
-    // Select all achievement cards
     const achievementCards = document.querySelectorAll('.achievement-card');
     const expandButtons = document.querySelectorAll('.expand-btn');
     const videoPreviewers = document.querySelectorAll('.video-preview');
@@ -328,41 +320,34 @@ function initAchievementsSection() {
     const closeModal = document.querySelector('.close-modal');
     const modalVideo = document.querySelector('.video-modal video');
     
-    // Animate cards on scroll with controlled timing
     function animateAchievementCards() {
         achievementCards.forEach((card, index) => {
             const cardPosition = card.getBoundingClientRect().top;
             const screenPosition = window.innerHeight / 1.1;
             
             if (cardPosition < screenPosition) {
-                // Add animated class with staggered delay
                 setTimeout(() => {
                     card.classList.add('animated');
-                }, index * 150); // 150ms delay between each card
+                }, index * 150); 
             }
         });
     }
     
-    // Check if cards are in view on scroll
     window.addEventListener('scroll', animateAchievementCards);
     
-    // Initial check for visible cards
     setTimeout(animateAchievementCards, 300);
     
-    // Toggle achievement details on expand button click
     expandButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent the click from propagating to the header
+            e.stopPropagation(); 
             
             const targetId = this.getAttribute('data-target');
             const targetDetails = document.getElementById(targetId);
             
-            // Toggle active class for the details section
             if (targetDetails.classList.contains('active')) {
                 targetDetails.classList.remove('active');
                 this.classList.remove('active');
             } else {
-                // Close all other open details first
                 document.querySelectorAll('.achievement-details.active').forEach(detail => {
                     if (detail.id !== targetId) {
                         detail.classList.remove('active');
@@ -370,14 +355,12 @@ function initAchievementsSection() {
                     }
                 });
                 
-                // Open the clicked details
                 targetDetails.classList.add('active');
                 this.classList.add('active');
             }
         });
     });
     
-    // Also toggle details when clicking on the header
     document.querySelectorAll('.achievement-header').forEach(header => {
         header.addEventListener('click', function() {
             const expandBtn = this.querySelector('.expand-btn');
@@ -387,40 +370,32 @@ function initAchievementsSection() {
         });
     });
     
-    // Handle video preview clicks
     videoPreviewers.forEach(preview => {
         preview.addEventListener('click', function() {
             const videoSrc = this.getAttribute('data-video');
             if (videoSrc && modalVideo) {
-                // Set the video source
                 modalVideo.querySelector('source').src = videoSrc;
-                modalVideo.load(); // Reload the video with the new source
+                modalVideo.load(); 
                 
-                // Show the modal with animation
                 videoModal.classList.add('active');
                 
-                // Prevent body scrolling
                 document.body.style.overflow = 'hidden';
             }
         });
     });
     
-    // Close modal on click
     if (closeModal) {
         closeModal.addEventListener('click', function() {
             videoModal.classList.remove('active');
             
-            // Re-enable body scrolling
             document.body.style.overflow = '';
             
-            // Pause the video
             if (modalVideo) {
                 modalVideo.pause();
             }
         });
     }
     
-    // Close modal on background click
     if (videoModal) {
         videoModal.addEventListener('click', function(e) {
             if (e.target === this) {
@@ -429,28 +404,23 @@ function initAchievementsSection() {
         });
     }
     
-    // Close modal on escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && videoModal.classList.contains('active')) {
             closeModal.click();
         }
     });
     
-    // Add some controlled subtle animations to elements
     function addSubtleAnimations() {
-        // Gently animate badges
         const badges = document.querySelectorAll('.achievement-badge');
         badges.forEach(badge => {
-            // Add a subtle pulse every so often
             setInterval(() => {
                 badge.style.transform = 'scale(1.1)';
                 setTimeout(() => {
                     badge.style.transform = 'scale(1)';
                 }, 300);
-            }, Math.random() * 7000 + 5000); // Random interval between 5-12 seconds
+            }, Math.random() * 7000 + 5000); 
         });
         
-        // Occasionally highlight a random card to draw attention
         setInterval(() => {
             const randomIndex = Math.floor(Math.random() * achievementCards.length);
             const randomCard = achievementCards[randomIndex];
@@ -467,17 +437,163 @@ function initAchievementsSection() {
                     }, 2000);
                 }
             }
-        }, 8000); // Every 8 seconds
+        }, 8000); 
     }
     
-    // Initialize subtle animations after a delay
     setTimeout(addSubtleAnimations, 2000);
 }
 
-// Add to your DOMContentLoaded event handler
 document.addEventListener('DOMContentLoaded', function() {
-    // Your existing initialization code
     
-    // Initialize the achievements section
     initAchievementsSection();
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    initNewPortfolioAnimations();
+  });
+  
+  function initNewPortfolioAnimations() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+      card.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+        
+        const distX = (mouseX - centerX) / centerX;
+        const distY = (mouseY - centerY) / centerY;
+        
+        const rotation = 10;
+        const tiltY = distX * rotation;
+        const tiltX = -distY * rotation;
+        
+        this.style.transform = `translateY(-15px) rotateY(${tiltY}deg) rotateX(${tiltX}deg)`;
+        
+        
+        const shadowX = -tiltY * 1.5;
+        const shadowY = -tiltX * 1.5;
+        this.style.boxShadow = `${shadowX}px ${shadowY}px 30px rgba(0, 0, 0, 0.15)`;
+        
+        const image = this.querySelector('.project-image');
+        if (image) {
+          const parallaxIntensity = 15;
+          const moveX = -distX * parallaxIntensity;
+          const moveY = -distY * parallaxIntensity;
+          image.style.transform = `scale(1.15) translate(${moveX}px, ${moveY}px) rotate(2deg)`;
+        }
+       
+        const content = this.querySelector('.project-content');
+        if (content) {
+          content.style.transform = `perspective(1200px) rotateX(${-tiltX/2}deg)`;
+        }
+      });
+     
+      card.addEventListener('mousedown', function() {
+        this.style.transform = 'translateY(-10px) scale(0.98)';
+        this.style.transition = 'transform 0.2s';
+      });
+      
+      card.addEventListener('mouseup', function() {
+        this.style.transform = 'translateY(-15px) scale(1)';
+        this.style.transition = 'transform 0.2s';
+        
+        setTimeout(() => {
+          this.style.transition = 'transform 0.4s, box-shadow 0.4s, border-color 0.4s';
+        }, 200);
+      });
+     
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = '';
+        this.style.boxShadow = '';
+        this.style.transition = 'transform 0.5s, box-shadow 0.5s, border-color 0.4s';
+        
+        const image = this.querySelector('.project-image');
+        if (image) {
+          image.style.transform = '';
+          image.style.transition = 'transform 0.5s';
+        }
+        
+        const content = this.querySelector('.project-content');
+        if (content) {
+          content.style.transform = '';
+        }
+      });
+    });
+   
+    const actionButtons = document.querySelectorAll('.project-action-btn');
+    actionButtons.forEach(btn => {
+      btn.addEventListener('mouseover', function() {
+        this.style.transform = 'translateY(-5px) scale(1.05)';
+        
+        const icon = this.querySelector('i');
+        if (icon) {
+          icon.style.animation = 'iconPop 0.5s forwards';
+        }
+      });
+      
+      btn.addEventListener('mouseout', function() {
+        this.style.transform = '';
+        
+        const icon = this.querySelector('i');
+        if (icon) {
+          icon.style.animation = '';
+        }
+      });
+     
+      btn.addEventListener('mousedown', function(e) {
+        e.stopPropagation();
+        
+        this.style.transform = 'translateY(-2px) scale(0.95)';
+      });
+      
+      btn.addEventListener('mouseup', function(e) {
+        e.stopPropagation();
+        
+        this.style.transform = 'translateY(-5px) scale(1.05)';
+      
+        setTimeout(() => {
+          if (!this.matches(':hover')) {
+            this.style.transform = '';
+          }
+        }, 200);
+      });
+    });
+    
+    function revealOnScroll() {
+      const portfolio = document.getElementById('portfolio');
+      if (portfolio && isElementInViewport(portfolio)) {
+        portfolio.classList.add('revealed');
+        
+        projectCards.forEach((card, index) => {
+          setTimeout(() => {
+            card.style.visibility = 'visible';
+          }, index * 200);
+        });
+      }
+    }
+    
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.75
+      );
+    }
+   
+    window.addEventListener('scroll', revealOnScroll);
+    
+    revealOnScroll();
+    
+    const navItems = document.querySelectorAll('.profile-nav li');
+    navItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+        if (tabId === 'portfolio') {
+          setTimeout(revealOnScroll, 100);
+        }
+      });
+    });
+  }
